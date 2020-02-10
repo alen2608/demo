@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery.toast.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #343a40;
+      font-family: 'Microsoft JhengHei', "Microsoft YaHei", STHeiti, sans-serif;
+    }
+
+    .header {
+      height: 55px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mw-100">
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: relative; z-index: 99;">
+        <a class="navbar-brand" href="#">Computer</a>
+        <button class="navbar-toggler"" type=" button" data-toggle="collapse" data-target="#nav" aria-controls="nav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                電腦介紹
+              </a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item bg-dark text-light" href="#nb">筆記型電腦</a>
+                <a class="dropdown-item bg-dark text-light" href="#pc">桌上型電腦</a>
+                <a class="dropdown-item bg-dark text-light" href="#aio">一體式電腦</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                零件介紹
+              </a>
+              <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
+                <a class="dropdown-item bg-dark text-light" href="#cpu">中央處理器</a>
+                <a class="dropdown-item bg-dark text-light" href="#ram">記憶體</a>
+                <a class="dropdown-item bg-dark text-light" href="#hdd">硬碟</a>
+                <a class="dropdown-item bg-dark text-light" href="#ssd">固態硬碟</a>
+                <a class="dropdown-item bg-dark text-light" href="#mb">主機板</a>
+                <a class="dropdown-item bg-dark text-light" href="#vga">顯示卡</a>
+              </div>
+            </li>
+            <a class=" nav-link text-light" href="#gu" role="button">
+              採購指南
+            </a>
+          </ul>
+        </div>
+      </nav>
+      <div class="w-100">
+        <div id="carousel" class="carousel slide " data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item  active">
+              <picture>
+                <source media="(max-width: 600px)" srcset="img/nb2.jpg" />
+                <img class="img-fluid w-100" src="img/nb1.jpg">
+              </picture>
+            </div>
+            <div class="carousel-item">
+              <picture>
+                <source media="(max-width: 600px)" srcset="img/pc2.jpg" />
+                <img class="img-fluid w-100" src="img/pc1.jpg">
+              </picture>
+            </div>
+            <div class="carousel-item">
+              <picture>
+                <source media="(max-width: 600px)" srcset="img/ot2.jpg" />
+                <img class="img-fluid w-100" src="img/ot1.jpg">
+              </picture>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class=" container-fluid">
+        <h2 class="text-light mt-3">電腦介紹</h2>
+        <div class="row ">
+          <div class="col-12 col-md-6 col-lg-4 my-2" id="nb">
+            <div class="card h-100">
+              <img class="img-fluid" src="img/nb.jpg" />
+              <div class="card-header">
+                laptop
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">筆記型電腦</h3>
+                <p class="card-text">又稱筆電、手提notebook，是一種可攜式計算機。筆記型電腦直譯自英語notebook
+                  computer一詞，而laptop英語本意為膝上電腦。筆記型電腦重量通常在1公斤至3公斤左右，螢幕尺寸大多
+                  在11英寸至17英寸之間。隨著電腦技術的發展，筆記型電腦的體積越來越小，重量越來越輕，而效能卻越
+                  發強大。為了要縮小體積，筆記型電腦通常需要有液晶顯示器（液晶螢幕），部分機種還有觸控螢幕。除
+                  了鍵盤以外，還裝有觸控板（touchpad）或觸控點作為定位裝置（Pointing device）。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 my-2" id="pc">
+            <div class="card h-100">
+              <img class="img-fluid" src="img/pc.jpg" />
+              <div class="card-header">
+                Desktop Computer
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">桌上型電腦</h3>
+                <p class="card-text">是在大小、效能以及價位等多個方面適合於個人使用，並由終端使用者直接操控的計算機，它與批次處理電腦或分時系統等一般同時由多人操控的大型電腦相對。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 my-2" id="aio">
+            <div class="card h-100">
+              <img class="img-fluid" src="img/aio.jpg" />
+              <div class="card-header">
+                All-in-One
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">一體式電腦</h3>
+                <p class="card-text">
+                  是一種把微處理器、主機板、硬碟、螢幕、喇叭、視訊鏡頭及顯示器整合為一體的桌上型電腦。原先為蘋果公司最先開發此區塊，蘋果公司曾將數款一體機推出市場，例如1980年代的原始麥金塔電腦以及1990年代到現今的iMac。2009年，Intel推出的低價CPU
+                  Intel Atom，促使各電腦廠商增加對AIO機型的設計和量產。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-light">零件介紹</h2>
+        <div class="row ">
+          <div class="col-12 col-md-6 col-lg-4 my-2" id="cpu">
+            <div class="card h-100">
+              <img class="img-fluid" src="img/cpu.jpg" />
+              <div class="card-header">
+                Central Processing Unit
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">中央處理器</h3>
+                <p class="card-text">
+                  是電腦的主要裝置之一，功能主要是解釋電腦指令以及處理電腦軟體中的資料。電腦的可程式化性主要是指對中央處理器的編程。1970年代以前，中央處理器由多個獨立單元構成，後來發展出由積體電路製造的中央處理器，這些高度收縮的元件就是所謂的微處理器，其中分出的中央處理器最為複雜的電路可以做成單一微小功能強大的單元。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 my-2" id="ram">
+            <div class="card h-100">
+              <img class="img-fluid" src="img/ram.jpg" />
+              <div class="card-header">
+                Random Access Memory
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">記憶體</h3>
+                <p class="card-text">
+                  是與CPU直接交換資料的記憶體。它可以隨時讀寫，而且速度很快，通常作為作業系統或其他正在執行中的程式的臨時資料儲存媒介。
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 my-2" id="hdd">
+            <div class="card h-100">
+              <img class="img-fluid" src="img/hdd.jpg" />
+              <div class="card-header">
+                Hard Disk Drive
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">硬碟</h3>
+                <p class="card-text">
+                  是電腦上使用堅硬的旋轉碟片為基礎的非揮發性記憶體，它在平整的磁性表面儲存和檢索數字資料，資料通過離磁性表面很近的磁頭由電磁流來改變極性的方式被寫入到磁碟上，資料可以通過碟片被讀取，原理是磁頭經過碟片的上方時碟片本身的磁場導致讀取線圈中電氣訊號改變。硬碟的讀寫是採用半隨機存取的方式，可以以任意順序讀取硬碟中的資料，但讀取不同位置的資料速度不相同。硬碟包括一至數片高速轉動的碟片以及放在致動器懸臂上的磁頭。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 my-2" id="ssd">
+            <div class="card h-100">
+              <img class="img-fluid" src="img/ssd.jpg" />
+              <div class="card-header">
+                Solid-state drive
+              </div>
+              <div class="card-body">
+                <h3 class="card-title ">固態硬碟</h3>
+                <p class="card-text">
+                  是一種主要以快閃記憶體(NAND Flash)作為永久性記憶體的電腦儲存裝置。固態硬碟採用SATA-III、PCIe
+                  x8或者mSATA、M.2、ZIF、IDE、U.2、CF、CFast等介面。由於價格及儲存空間與機械硬碟有巨大差距，固態硬碟無法取代機械式硬碟。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 my-2" id="mb">
+            <div class="card h-100">
+              <img class="img-fluid" src="img/mb.jpg" />
+              <div class="card-header">
+                Motherboard
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">主機板</h3>
+                <p class="card-text">
+                  主機板是計算機的主要電路板（PCB）。計算機的其他硬體一般直接插入到主機板中來交換資訊。主機板通常由晶片組、BIOS、印表埠、各種周邊裝置連接埠（如網路埠、Audio、USB）、PS/2鍵盤/鼠標介面和PCIe/PCI擴展插槽等組成。有時為了減小主機板尺寸，節省成本也通過插到主機板的子板來擴充更多擴展槽。現時主流的主機板規格有ATX規格、MicroATX、Mini-ITX。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 my-2 my-2" id="vga">
+            <div class="card h-100">
+              <img class="img-fluid" src="img/vga.jpg" />
+              <div class="card-header">
+                Graphics card
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">顯示卡</h3>
+                <p class="card-text">
+                  是個人電腦最基本組成部分之一，用途是將電腦系統所需要的顯示資訊進行轉換驅動顯示器，並向顯示器提供逐行或隔行掃描訊號，控制顯示器的正確顯示，是連接顯示器和個人電腦主機板的重要元件，是「人機對話」的重要裝置之一。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="text-light my-3" id="gu">採購指南</h2>
+        <div class="my-5 mx-5">
+          <h3 class="text-warning">中央處理器</h3>
+          <p class="text-light">電腦運算速度的快慢，最主要取決於CPU的等級從這網頁就可以看出CPU等級，效能差多少一目了然，很多人會說要買一台速度快一點的電腦速度要快，就是要挑CPU等級高一點的。
+          </p>
+          <h3 class="text-warning">記憶體</h3>
+          <p class="text-light">記憶體是用來暫存資料，並非用來運算，記憶體的速度對於效能並沒有顯著的影響，例如DDR3 1333和DDR3
+            1666用起來感覺其實差不多，目前主流平台採用雙通道技術，裝兩條同樣規格的記憶體，可增加頻寬提高效能，記憶體品質不良可能在運算過程導致當機。
+          </p>
+          <h3 class="text-warning">硬碟/固態硬碟</h3>
+          <p class="text-light">
+            用來儲存資料的零組件，目前主流都是500G起跳，除非用來作影片剪輯、儲存大量影片檔，不然500G已綽綽有餘，不必特別在意硬碟容量，未來不夠用的話可使用外接硬碟來解決儲存容量不足的問題，如果希望開機或執行程式的速度快一點，可考慮使用固態硬碟(SSD硬碟)作為開機硬碟。
+          </p>
+          <h3 class="text-warning">主機板</h3>
+          <p class="text-light">主機板的好壞影響電腦穩定性，選用軍規、全固態電容的主機板，可延長電腦使用壽命並提高系統穩定性，主機板的晶片也有等級之分，不同晶片提供的功能不同，
+            例如低階主機板不提供磁碟陣列等功能，如果是喜歡玩超頻、追求效能的玩家才須特別斟酌。
+          </p>
+          <h3 class="text-warning">顯示卡</h3>
+          <p class="text-light">
+            專門處理影像相關工作及貼圖運算的重要零組件，3D遊戲、繪圖工作都需要配備顯示卡以利作業，繪圖效能最主要取決於晶片等級，不過搭配的記憶體頻寬會對效能有影響，例如DDR5會比DDR3來得好。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
