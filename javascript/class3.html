@@ -1,0 +1,37 @@
+<script>
+    function doCalc() {
+        let op = document.getElementById("op").selectedIndex;
+
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        if (op == 0) {
+            let c = (a + b);
+            document.getElementById("c").innerHTML = c;
+        }
+        else if (op == 1) {
+            let c = (a - b);
+            document.getElementById("c").innerHTML = c;
+        }
+        else if (op == 2) {
+            let c = (a * b);
+            document.getElementById("c").innerHTML = c;
+        }
+        else if (op == 3) {
+            let c = parseInt(a / b);
+            let d = a % b;
+            document.getElementById("c").innerHTML = c + "......" + d;
+        }
+
+
+    }
+</script>
+<input type="text" id="a">
+<select id="op">
+    <option>+</option>
+    <option>-</option>
+    <option>x</option>
+    <option>/</option>
+</select>
+<input type="text" id="b">
+<input type="button" value="=" onclick="doCalc()">
+<span id="c"></span>

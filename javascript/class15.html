@@ -1,0 +1,10 @@
+<script>
+    let p = [0, 0, 0, 0, 0, 0];
+    for (i = 0; i < 10000; i++) {
+        let a = parseInt(Math.random() *6 );
+        p[a + 2 >= 6 ? a - 6 : a]++;
+    }
+    for (let i = 0; i < p.length; i++) {
+        document.write(`${i + 1}點出現${p[i]}次<br>`)
+    }
+</script>

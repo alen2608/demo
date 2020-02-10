@@ -1,0 +1,45 @@
+<style>
+    table {
+        width: 100%;
+        height: 100%;
+        text-align: center
+    }
+
+    td {
+        border: 1px solid black;
+    }
+</style>
+<table>
+
+    <script>
+        let i;
+        document.write("<tr>")
+        document.write("<td>");
+        document.write(1)
+        document.write("</td>")
+
+        for (i = 2; i < 1001; i++) {
+            let flag = true
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = false;
+                }
+            }
+            if (flag) {
+
+                document.write("<td bgcolor='yellow'>");
+                document.write(i)
+                document.write("</td>")
+            }
+            else {
+                document.write("<td>");
+                document.write(i)
+                document.write("</td>")
+            }
+            if (((i) % 10) == 0) {
+                document.write("<tr>")
+            }
+        }
+        document.write("</tr>")
+    </script>
+</table>

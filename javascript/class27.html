@@ -1,0 +1,36 @@
+<script>
+    let person = [];
+    person['name'] = 'aaa';
+    person['age'] = 19;
+    document.write(person['name'] + ":" + person['age'] + "<br>");
+    person.push(123);
+    person.push('iii');
+    for (let key in person) {
+        document.write(key + "=" + person[key] + "<br>")
+    }
+    person['eat'] = function () {
+        document.write(this.name + " eat" + "<br>")
+    }
+    person.eat();
+
+    function test(x, y) {
+        let r1 = x + y;
+        let r2 = x - y;
+        let r3 = x * y;
+        let r4 = x / y;
+        let result=[r1,r2,r3,r4]
+        return result
+    }
+    let r=test(10,6);
+    document.write(r[0]+":",r[1]);
+
+    function test(x, y) {
+        let r1 = x + y;
+        let r2 = x - y;
+        let r3 = x * y;
+        let r4 = x / y;
+        return [r1,r2,r3,r4]
+    }
+    let [a1,a2,a3,a4]=test(10,6);
+    document.write(a3+":",a4)
+</script>

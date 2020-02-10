@@ -1,0 +1,35 @@
+<script>
+    let ary = [1, 2, 3, 4];
+    for (let a = 0; a < 4; a++) {
+        console.log(ary[a]);
+    }
+    console.log("-----------------")
+    for (let b of ary) {
+        console.log(b);
+    }
+    console.log("-----------------")
+    ary[4] = 99;
+    for (let b of ary) {
+        console.log(b);
+    }
+    console.log("-----------------")
+    ary[7] = 9;
+    for (let b of ary) {
+        console.log(b);
+    }
+    console.log("-----------------")
+    ary.push(100)
+    for (let b of ary) {
+        console.log(b);
+    }
+    console.log("-----------------")
+    ary.pop()
+    for (let b of ary) {
+        console.log(b);
+    }
+    console.log("-----------------")
+    ary.shift()
+    for (let b of ary) {
+        console.log(b);
+    }
+</script>

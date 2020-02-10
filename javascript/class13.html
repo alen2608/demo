@@ -1,0 +1,13 @@
+test:
+<script>
+    for (let i = 0; i < 10; i++) {
+        for (let j = 10; j > 0; j--) {
+            console.log(`${i}:${j}`)
+
+            if ((i + j) == 17) {
+                console.log("*")
+                break test;
+            }
+        }
+    }
+</script>

@@ -1,0 +1,44 @@
+<script>
+    let poker = [];
+    let p = [];
+    let i;
+    let j;
+    p[0] = [];
+    p[1] = [];
+    p[2] = [];
+    p[3] = [];
+    for (i = 0; i < 52; i++) {
+        let rand = parseInt(Math.random() * 52)
+        let repeat = false;
+        for (let j = 0; j < i; j++) {
+            if (rand == poker[j]) {
+                repeat = true;
+                break;
+            }
+        }
+        if (!repeat) {
+            poker[i] = rand;
+        }
+        else {
+            i--;
+        }
+    }
+    document.write(poker);
+    document.write(`<br>`);
+    for (let i = 0; i < 52; i++) {
+        j = i % 4;
+        if (j = 0) {
+            p[j] = poker[i];
+        }
+        else if(j=1){
+            p[j] = poker[i];
+        }
+        else if(j=2){
+            p[j] = poker[i];
+        }
+        else if(j=3){
+            p[j] = poker[i];
+        }
+        document.write(p[1]);
+    }
+</script>

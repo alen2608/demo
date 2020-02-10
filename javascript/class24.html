@@ -1,0 +1,36 @@
+<script>
+    let i = 0;
+    let time = null;
+    let run = false;
+    function start() {
+
+        document.getElementById("start").disabled = true;
+
+        time = setInterval(docounter, 1 * 1000);
+
+
+
+    }
+    function docounter() {
+        document.getElementById("counter").innerHTML = ++i;
+    }
+    function pause() {
+        if (time != null) {
+            clearInterval(time)
+            document.getElementById("start").disabled = false;
+
+        }
+
+    }
+    function zero() {
+        i = 0
+        clearInterval(time)
+        document.getElementById("counter").innerHTML = i;
+        document.getElementById("start").disabled = false;
+    }
+</script>
+<input type="button" value="start" id="start" onclick="start()">
+<input type="button" value="pause" onclick="pause()">
+<input type="button" value="zero" onclick="zero()">
+<hr>
+<div id="counter"> </div>

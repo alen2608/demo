@@ -1,0 +1,17 @@
+<script>
+    let bike = function (name, speed) {
+        this.name = name;
+        this.speed = speed;
+        console.log("debug1")
+        // this.chSpeed = function (speed) {
+        //     this.speed = speed;
+        //     console.log("debug2")
+        // }
+    }
+    bike.prototype.chSpeed = function (speed) {
+        this.speed = speed;
+        console.log("debug3")
+    }
+    let b1 = new bike("abc", 40);
+    b1.chSpeed(50);
+</script>

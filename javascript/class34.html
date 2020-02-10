@@ -1,0 +1,73 @@
+<h1 id="header"></h1>
+<hr>
+<input type="button" value="click" id="clear">
+<input type="button" value="click" id="left">
+<input type="button" value="click" id="right">
+<hr>
+<canvas id="canvas1" width="480" height="320" style="border: 2px solid red;">
+
+</canvas>
+<script>
+    header.innerHTML = "aaaaaaabb";
+    clear.onclick = function () {
+        ctx.clearRect(0, 0, 480, 320);
+    }
+    let ctx = canvas1.getContext('2d');
+    ctx.strokeStyle = "#ff0000";
+
+    let drag = false;
+    canvas1.onmousedown = function (event) {
+        drag = true;
+        ctx.beginPath();
+        ctx.moveTo(event.offsetX, event.offsetY);
+    };
+    canvas1.onmouseup = function (event) {
+        drag = false;
+    }
+    canvas1.onmousemove = function (event) {
+        if (!drag) return;
+        ctx.lineTo(event.offsetX, event.offsetY);
+        ctx.stroke();
+    }
+    let dice = new Image()
+    let dicex = 200, dicey = 200;
+    ;
+    dice.src = "dice.png";
+    dice.onload = function () {
+        ctx.drawImage(dice, dicex, dicey);
+    }
+    right.onclick = function () {
+        dicex += 5;
+        ctx.clearRect(0, 0, 480, 320);
+        ctx.drawImage(dice, dicex, dicey);
+    }
+    left.onclick = function () {
+        dicex -= 5;
+        ctx.clearRect(0, 0, 480, 320);
+        ctx.drawImage(dice, dicex, dicey);
+    }
+    dice.speedX = Math.floor(Math.random() * 21) - 10;
+    dice.speedY = Math.floor(Math.random() * 21) - 10;
+    dice.run = function () {
+        dicex += dice.speedX;
+        dicey += dice.speedY;
+        ctx.clearRect(0, 0, 480, 320);
+        ctx.drawImage(dice, dicex, dicey);
+        dice.check(dicex, dicey);
+    }
+    dice.check = function () {
+        if (dicex <= 0 || dicex >= 400) {
+            this.turnX();
+        }
+        if (dicey <= 0 || dicey >= 260) {
+            this.turnY();
+        }
+    }
+    dice.turnX = function () {
+        this.speedX = -this.speedX;
+    }
+    dice.turnY = function () {
+        this.speedY = -this.speedY;
+    }
+    setInterval(dice.run, 1 * 100);
+</script>

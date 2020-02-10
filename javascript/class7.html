@@ -1,0 +1,20 @@
+<script>
+    function years() {
+        let a = parseInt(document.getElementById("year").value);
+        if ((a % 4) != 0) {
+            document.getElementById("result").innerHTML = "平年";
+        }
+        else if ((a % 400) == 0) {
+            document.getElementById("result").innerHTML = "閏年";
+        }
+        else if ((a % 100) == 0) {
+            document.getElementById("result").innerHTML = "平年";
+        }
+        else {
+            document.getElementById("result").innerHTML = "閏年";
+        }
+    }
+</script>
+<input type="text" id="year">
+<input type="button" value="是否閏年" onclick="years()">
+<span id="result"></span>

@@ -1,0 +1,74 @@
+<canvas id="canvas" width="480" height="320" style="border: 1px solid black;"></canvas>
+<script>
+    let ctx = canvas.getContext('2d');
+    let bg = new Image();
+    bg.src = 'bg.jpg';
+    let ball1 = new Image();
+    let ball2 = new Image();
+    let ball3 = new Image();
+    ball1.src = "ball1.png"; ball2.src = "ball2.png"; ball3.src = "ball3.png";
+    let ballImg = [ball1, ball2, ball3];
+    let balls = []; // element is-a ballObj
+    let ballObj = function () {
+        this.x = 0;
+        this.y = 0;
+        this.dx = Math.floor(Math.random() * 17) - 8;
+        this.dy = Math.floor(Math.random() * 17) - 8;
+        this.img = 0;
+    };
+    bg.onload = function () {
+        ctx.drawImage(bg, 0, 0);
+    }
+
+    function refreshView() {
+        ctx.drawImage(bg, 0, 0);
+        for (let ball of balls) {
+            ctx.drawImage(ballImg[ball.img], ball.x, ball.y);
+        }
+    }
+    setInterval(refreshView, 16);
+
+    canvas.onclick = function (e) {
+        let ball = new ballObj();
+        if (e.offsetX - 24 < 0) {
+            ball.x = 1;
+        }
+        else if (e.offsetX + 48 > canvas.width) {
+            ball.x = canvas.width - 49;
+        }
+        else {
+            ball.x = e.offsetX - 24;
+        }
+        if (e.offsetY - 24 < 0) {
+            ball.y = 1;
+        }
+        else if (e.offsetY + 48 > canvas.height) {
+            ball.y = canvas.height - 49;
+        }
+        else {
+            ball.y = e.offsetY - 24;
+        }
+
+
+
+        ball.img = Math.floor(Math.random() * 3);
+        balls.push(ball);
+
+    }
+    function moveBall(ball) {
+        if (ball.x <= 0 || ball.x + 48 >= canvas.width) {
+            ball.dx *= -1;
+        }
+        if (ball.y <= 0 || ball.y + 48 >= canvas.height) {
+            ball.dy *= -1;
+        }
+        ball.x += ball.dx;
+        ball.y += ball.dy;
+    }
+    function go() {
+        for (let ball of balls) {
+            moveBall(ball);
+        }
+    }
+    setInterval(go, 30);
+</script>

@@ -1,0 +1,18 @@
+<script>
+    function change() {
+        let textAlign = document.getElementById("textalign");
+        let text1 = document.getElementById('text1');
+        text1.style.textAlign = textAlign.value;
+    }
+
+</script>
+
+<div id="text1">
+    hello
+</div>
+<hr>
+<select id="textalign" onchange="change()">
+    <Option value="left">左</Option>
+    <Option value="center">中</Option>
+    <Option value="ringt">右</Option>
+</select>

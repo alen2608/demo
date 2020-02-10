@@ -1,0 +1,32 @@
+<script>
+    function test1() {
+        let div1 = document.querySelector('#div1');
+        div1.innerHTML = "abc";
+        let div2 = document.querySelectorAll(".div2");
+        for (let i in div2) {
+            div2[i].innerHTML = "cba";
+        }
+        let spans = document.getElementsByTagName('span');
+        for (let span in spans) {
+            spans[span].innerHTML = "ddd";
+        }
+    }
+</script>
+
+<h1>abcde</h1>
+<hr>
+<input type="button" value="test1" onclick="test1()" />
+<input type="button" value="test2" onclick="test2()" />
+<hr>
+<div id="div1">
+    <hr>
+
+</div>
+<div class="div2">
+    <hr>
+
+</div>
+<div class="div2">
+    <hr>
+</div>
+<span></span>:<span></span>:<span></span>:<span></span>

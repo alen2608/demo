@@ -1,0 +1,17 @@
+<script>
+    // 1 ~ 6 => 100 times
+    let p = [0, 0, 0, 0, 0, 0];  // p[0] = p[1] = p[2] =... p[5] = 0
+    for (let i = 0; i < 10000000; i++) {
+        let point = parseInt(Math.random() * 6);   // 0-8
+        p[point]++;
+    }
+
+    for (let j = 0; j < 6; j++) { //0-5
+        document.write(`${j + 1}點出現${p[j]}次<br>`);
+    }
+
+
+//p的陣列已經定義6個儲存格 會因後面的程式讓他擴張嗎?
+//為何p[point]++;錯誤?
+
+</script>

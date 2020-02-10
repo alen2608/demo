@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Menu</title>
+
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			font: verdana;
+			background-color: sandybrown;
+			padding: 30px;
+		}
+
+		h1 {
+			text-align: center;
+			border-bottom: 5px double #000000;
+			margin-bottom: 50px;
+		}
+
+		ul {
+
+
+			list-style: none;
+			font-size: 13pt;
+		}
+
+		ul#navmenu li {
+			width: 125px;
+			text-align: center;
+			position: relative;
+			float: left;
+		}
+
+		ul#navmenu a {
+			text-decoration: none;
+			display: block;
+			width: 125px;
+			height: 25px;
+			line-height: 25px;
+			background-color: #28ec28;
+			border: 1px solid rgb(100, 58, 40);
+			border-radius: 30px;
+		}
+
+		ul#navmenu .sub1 a {
+			margin-top: 15px;
+
+		}
+
+		ul#navmenu .sub2 a {
+			margin-left: 5px;
+		}
+
+		ul#navmenu li:hover>a {
+			background-color: violet;
+		}
+
+		ul#navmenu li:hover>a:hover {
+			background-color: blueviolet;
+		}
+
+		ul#navmenu ul.sub1 {
+			display: none;
+			position: absolute;
+			top: 26px;
+			left: 0px;
+		}
+
+		ul#navmenu ul.sub2 {
+			display: none;
+			position: absolute;
+			top: 0px;
+			left: 126px;
+		}
+
+		ul#navmenu li:hover .sub1 {
+			display: block;
+		}
+
+		ul#navmenu .sub1 li:hover .sub2 {
+			display: block;
+		}
+
+		.darrow {
+			font-size: 15px;
+			position: absolute;
+			top: 5px;
+			right: 3px;
+		}
+
+		.rarrow {
+			font-size: 15px;
+			position: absolute;
+			top: 20px;
+			right: 2px;
+		}
+	</style>
+
+
+
+</head>
+
+<body>
+
+	<h1>Navigation Menu</h1>
+
+	<div >
+		
+	<ul id="navmenu">
+		<li><a href="#">hyperlink 1</a></li>
+		<li><a href="#">hyperlink 2</a><span class="darrow">&#9660;</span>
+			<ul class="sub1">
+				<li><a href="#">hyperlink 2.1</a></li>
+				<li><a href="#">hyperlink 2.2</a></li>
+				<li><a href="#">hyperlink 2.3</a></li>
+			</ul>
+		</li>
+		<li><a href="#">hyperlink 3</a></li>
+		<li><a href="#">hyperlink 4</a><span class="darrow">&#9660;</span>
+			<ul class="sub1">
+				<li><a href="#">hyperlink 4.1</a></li>
+				<li><a href="#">hyperlink 4.2</a></li>
+				<li><a href="#">hyperlink 4.3</a><span class="rarrow">&#9654;</span>
+					<ul class="sub2">
+						<li><a href="#">hyperlink 4.3.1</a></li>
+						<li><a href="#">hyperlink 4.3.2</a></li>
+						<li><a href="#">hyperlink 4.3.3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#">hyperlink 5</a></li>
+	</ul>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<script>
+    let body = document.createElement('body');
+    document.body = body;
+
+    let header = document.createElement('h1');
+    let h1text = document.createTextNode('abc 123 abc');
+    let hr = document.createElement('hr');
+    document.body.appendChild(hr);
+    header.appendChild(h1text);
+    document.body.appendChild(header);
+    let ul = document.createElement('ul');
+    document.body.appendChild(ul);
+    for (let i = 1; i <= 4; i++) {
+        let li = document.createElement('li');
+        li.innerHTML = `${i}`;
+        ul.appendChild(li);
+        if (i == 2) {
+            r = li;
+        }
+    }
+    ul.removeChild(r);
+    let hr2 = hr.cloneNode();
+    document.body.appendChild(hr2);
+    let ul2 = ul.cloneNode();
+    document.body.appendChild(ul2);
+    for (let i = 1; i <= 4; i++) {
+        let li = document.createElement('li');
+        li.innerHTML = `${i}`;
+        ul2.appendChild(li);
+    }
+    let hr3 = hr.cloneNode();
+    document.body.appendChild(hr3);
+    let input = document.createElement("intput");
+    document.body.appendChild(input);
+    input.type = 'button';
+    input.value = 'Click';
+    input.onclick = function () {
+        setTimeout(() => {
+            hr.style.borderTopColor = "red"
+        }, 1 * 1000);
+
+    }
+</script>

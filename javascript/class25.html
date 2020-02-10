@@ -1,0 +1,53 @@
+<script>
+    let bike = new Object();
+    document.write(typeof bike + "<br>");
+    bike.speed = 0;
+    document.write(bike.speed + "<br>");
+    bike.upSpeed = function () {
+        this.speed = this.speed < 1 ? 1 : this.speed * 1.5;
+        document.write(bike.speed + "<br>");
+    };
+    bike.downSpeed = function () {
+        this.speed = this.speed < 1 ? 0 : this.speed * 0.8;
+        document.write(bike.speed + "<br>");
+    };
+    bike.upSpeed();
+    bike.upSpeed();
+    bike.upSpeed();
+    bike.upSpeed();
+    bike.upSpeed();
+    bike.upSpeed();
+    bike.downSpeed();
+    bike.downSpeed();
+    bike.downSpeed();
+
+
+    let bike2 = {
+        speed: 0,
+        gear: 1,
+        upSpeed: function () {
+            this.speed = this.speed < 1 ? 1 : this.speed * this.gear * 1.5;
+            document.write(bike2.speed + "<br>");
+        },
+        downSpeed: function () {
+            this.speed = this.speed < 1 ? 0 : this.speed * 0.5;
+            document.write(bike2.speed + "<br>");
+
+        }
+    }
+    bike2.upSpeed();
+    bike2.upSpeed();
+    bike2.upSpeed();
+    bike2.upSpeed();
+    bike2.downSpeed();
+    bike2.downSpeed();
+    bike2.downSpeed();
+
+    bike['upSpeed']();
+    document.write(bike.speed + "<br>");
+    let method = 'upSpeed';
+    bike[method];
+    document.write(bike.speed + "<br>");
+
+
+</script>
