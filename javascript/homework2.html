@@ -1,0 +1,55 @@
+<input type="text" id="num">
+<input type="button" value="Click" onclick="ab()">
+<input type="button" value="RE" onclick="re()">
+<div id="out"></div>
+<script>
+    let nums ;
+    re();
+    function ab() {
+        let a = 0, b = 0;
+        let tests = document.getElementById("num").value;
+        test = tests.split("");
+        console.log(test);
+        for (let i in test) {
+            for (let j in num) {
+                if (test[i] == num[j]) {
+                    if (i == j) {
+                        a++;
+                    }
+                    else {
+                        b++;
+                    }
+                }
+            }
+        }
+        if (a == num.length) {
+            console.log("答對了");
+            alert("答對了");
+        }
+        else {
+            console.log("a:" + a + "b:" + b);
+            document.getElementById("out").innerHTML += (tests + "  " + "A:" + a + "B:" + b + "<br>");
+        }
+    }
+    function re() {
+        nums = String(Math.floor(Math.random() * 900) + 100);
+        num = nums.split("");
+        document.getElementById("num").value = "";
+        document.getElementById("out").innerHTML = "";
+        console.log(num);
+        check(num);
+
+    }
+
+    function check() {
+        for (let j = 0; j <= num.length; j++) {
+            for (i = j + 1; i <= num.length; i++) {
+                if (num[j] == num[i]) {
+                    re();
+                }
+            }
+        }
+    }
+
+
+</script>
